@@ -1,0 +1,12 @@
+<script id="task-form-template" type="x-tmpl-mustache">
+	
+        <h2 class="heading">Add a New Todo</h2>
+                <form id="task_form" method="POST">
+                {% csrf_token %}
+                {{ form.todo.as_table }}
+                <!-- can also be form.as_p, form.as_ul -->
+                <input type="submit" value="ADD a Todo">
+
+            </form>
+    
+</script>

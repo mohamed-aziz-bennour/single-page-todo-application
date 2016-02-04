@@ -1,0 +1,46 @@
+<script id="todos-list-template" type="x-tmpl-mustache">
+	
+        <h2 class="heading">Todos</h2>
+            <table> 
+              {% verbatim %}
+               		   {{#todos}}
+                        <tr>
+
+
+            <td>
+      <form id="update_form" method="POST">
+      <input type="hidden" name="id_post" value={{id}}>
+       <input type="text" name="task" value="{{task}}">
+      <input type='submit' value='Update'>
+      </form>
+      </td>
+      
+      
+                	          <td>{{updated_at}}</td>
+                	
+                	          <td> {{created_at}}</td>
+                            
+
+      
+      
+      
+    <td> 
+      <form id="complete_form" method="POST">
+      <input type="hidden" name="id_post" value={{id}}>
+      <input type="submit" value="Complete">
+      </td>
+      </form>
+
+
+                            
+                            
+
+                        </tr>
+						        {{/todos}}
+
+					   {% endverbatim %}
+				    </table>
+
+            
+    
+</script>

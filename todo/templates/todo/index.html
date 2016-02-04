@@ -1,0 +1,24 @@
+{%load staticfiles%}
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
+	<script src="{%static "todo/django_ajax.js"%}"></script>
+	<script src="{%static "todo/todo.js"%}"></script>
+	
+</head>
+<body>
+	<h1>Todos</h1>
+	<div class='form_class'> 
+		
+	</div>
+	<div class='token_user'> </div>
+	<div class='add_post'> </div>
+
+	{%include "todo/login_form.html"%}
+	{%include "todo/todos_in.html"%}
+	{%include "todo/task_form.html"%}
+
+</body>
+</html>

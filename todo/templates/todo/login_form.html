@@ -1,0 +1,12 @@
+<script id="login-form-template" type="x-tmpl-mustache">
+	
+        <h2 class="heading">Sign in</h2>
+                <form id="login_form" action="{% url 'todo:login' %}" method="POST">
+                {% csrf_token %}
+                {{ form.user.as_table }}
+                <!-- can also be form.as_p, form.as_ul -->
+                <input type="submit" value="Sign IN">
+
+            </form>
+    
+</script>
